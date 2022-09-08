@@ -1,23 +1,23 @@
-import bs4
-import urllib.request as urllib_request
-import pandas as pd
-import pymongo
+import os
+from dotenv import load_dotenv
 from pymongo import MongoClient
 from bs4 import BeautifulSoup
-from urllib.request import urlopen, Request
+from urllib.request import urlopen
 from typing import List, NamedTuple
 
-# client = MongoClient(MONGO_DB_CLIENT_URI)
+load_dotenv()
+
+connection_string=os.getenv("MONGODB_CONNECTION_STRING")
+
+# client = MongoClient(connection_string)
 # db = client.pokedex_vue
-# pokemon_collection = db.pokemon
+# pokemon_collection = db.pokemon_env_test
 
 response = urlopen('https://www.serebii.net/pokemon/nationalpokedex.shtml')
 html = response.read().decode('latin-1')
 soup = BeautifulSoup(html, 'html.parser')
 
 pokedex = soup.find('table', {'class' : 'dextable'}).findAll('tr',recursive=False)
-
-allPkm = []
 
 class Pokemon(NamedTuple):
     id: str
@@ -31,6 +31,8 @@ class Pokemon(NamedTuple):
     sp_attack: int
     sp_defense: int
     speed: int
+
+scraped_counter = 0
 
 for row in pokedex[2:]:
     pokemon = {}
@@ -90,8 +92,9 @@ for row in pokedex[2:]:
     #     "speed": int(pokemon_data.speed),
     # })
 
-    allPkm.append(pokemon_data)
+    scraped_counter+=1
 
-print(allPkm)
-# dataset = pd.DataFrame(allPkm)
-# dataset.to_json('./data.json', orient = 'split',index = False)
+    print(pokemon)
+    print("Pokémon scraped: ", scraped_counter)
+
+print("Done! Successfully scraped", scraped_counter, "Pokémon!")
