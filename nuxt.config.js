@@ -14,16 +14,20 @@ export default {
 			{ hid: "description", name: "description", content: "" },
 			{ name: "format-detection", content: "telephone=no" },
 		],
-		link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+		link: [
+			{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+			{ rel: "stylesheet", href: "/css/default.css" },
+			{
+				rel: "stylesheet",
+				href: "https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap",
+			},
+		],
 	},
 
 	// Global CSS: https://go.nuxtjs.dev/config-css
-	css: [],
 
 	// Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-	plugins: [
-        { src: '~/plugins/axios.js' },
-    ],
+	plugins: [{ src: "~/plugins/axios.js" }],
 
 	// Auto import components: https://go.nuxtjs.dev/config-components
 	components: true,
@@ -39,9 +43,9 @@ export default {
 	},
 
 	proxy: {
-		'/api/': {
-			target: process.env.BACKEND_URL || 'http://localhost:5000/',
-			pathRewrite: { '^/api/': '' },
+		"/api/": {
+			target: process.env.BACKEND_URL || "http://localhost:5000/",
+			pathRewrite: { "^/api/": "" },
 			changeOrigin: true,
 		},
 	},

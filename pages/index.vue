@@ -1,6 +1,15 @@
 <template>
 	<div>
-		<button @click="listPokemonInConsole(0)">TESTE CARALHOOOOOO</button>
+		<div class="d-flex">
+			<div class="color-purple-1">TESTE CARALHOOOOOO</div>
+			<div
+				class="bg-black color-white mt-32"
+				@click="listPokemonInConsole(1)"
+			>
+				TESTANDO AINDAAAAA {{ pokemons[323].name }}
+                <img :src="`https://serebii.net/${pokemons[323].icon}`" alt="">
+			</div>
+		</div>
 	</div>
 </template>
 
@@ -17,11 +26,11 @@ export default {
 		}
 	},
 
-    data() {
-        return {
-            pokemons: []
-        }
-    },
+	data() {
+		return {
+			pokemons: [],
+		};
+	},
 
 	methods: {
 		listPokemonInConsole(pokemonId) {
