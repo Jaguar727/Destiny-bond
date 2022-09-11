@@ -11,7 +11,7 @@ connection_string=os.getenv("MONGODB_CONNECTION_STRING")
 
 # client = MongoClient(connection_string)
 # db = client.pokedex_vue
-# pokemon_collection = db.pokemon_env_test
+# pokemon_collection = db.pokemons
 
 response = urlopen('https://www.serebii.net/pokemon/nationalpokedex.shtml')
 html = response.read().decode('latin-1')
