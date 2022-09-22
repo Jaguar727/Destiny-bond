@@ -10,9 +10,9 @@ load_dotenv()
 
 connection_string=os.getenv("MONGODB_CONNECTION_STRING")
 
-client = MongoClient(connection_string)
-db = client.pokedex_vue
-pokemon_collection = db.pokemons
+# client = MongoClient(connection_string)
+# db = client.pokedex_vue
+# pokemon_collection = db.pokemons
 
 response = urlopen('https://www.serebii.net/pokemon/nationalpokedex.shtml')
 html = response.read().decode('latin-1')
@@ -93,21 +93,21 @@ for row in pokedex[2:]:
         speed = pokemon['speed'],
     )
     
-    pokemon_collection.insert_one({
-        "id": pokemon_data.id,
-        "intId": pokemon_data.intId,
-        "name": pokemon_data.name,
-        "urlName": pokemon_data.urlName,
-        "icon": pokemon_data.icon,
-        "types": pokemon_data.types,
-        "abilities": pokemon_data.abilities,
-        "hp": int(pokemon_data.hp),
-        "attack": int(pokemon_data.attack),
-        "defense": int(pokemon_data.defense),
-        "sp_attack": int(pokemon_data.sp_attack),
-        "sp_defense": int(pokemon_data.sp_defense),
-        "speed": int(pokemon_data.speed)
-        })
+    # pokemon_collection.insert_one({
+    #     "id": pokemon_data.id,
+    #     "intId": pokemon_data.intId,
+    #     "name": pokemon_data.name,
+    #     "urlName": pokemon_data.urlName,
+    #     "icon": pokemon_data.icon,
+    #     "types": pokemon_data.types,
+    #     "abilities": pokemon_data.abilities,
+    #     "hp": int(pokemon_data.hp),
+    #     "attack": int(pokemon_data.attack),
+    #     "defense": int(pokemon_data.defense),
+    #     "sp_attack": int(pokemon_data.sp_attack),
+    #     "sp_defense": int(pokemon_data.sp_defense),
+    #     "speed": int(pokemon_data.speed)
+    #     })
     
 
     scraped_counter+=1
