@@ -6,9 +6,17 @@ const pokemonSchema = mongoose.Schema({
 		index: true,
 	},
 
+    intId: {
+        type: Number,
+    },
+
 	name: {
 		type: String,
 	},
+
+    urlName:{
+        type: String,
+    },
 
 	icon: {
 		type: String,
