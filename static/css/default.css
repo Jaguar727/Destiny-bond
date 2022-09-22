@@ -9,12 +9,11 @@
 	font-display: swap;
 }
 
-	/*
+/*
     BASE WEBSITE COLORS VARIABLES
     */
 
 :root {
-
 	--white: #ffffff;
 
 	--purple-1: #b6add5;
@@ -103,7 +102,7 @@ hr {
 }
 
 .br-50 {
-	border-radius: 50%;
+	border-radius: 9999px;
 }
 
 /*******************
@@ -476,7 +475,7 @@ hr {
 
 .color-purple-1 {
 	color: var(--purple-1);
-    margin-top: 2px;
+	margin-top: 2px;
 }
 
 .color-purple-2 {
@@ -545,6 +544,108 @@ hr {
 
 .bg-transparent {
 	background-color: transparent;
+}
+
+/****************************
+**POKEMON TYPE PILL CLASSES**
+****************************/
+
+.pill-type-normal {
+	background-color: var(--type-normal);
+	color: var(--gray-1);
+}
+
+.pill-type-fighting {
+	background-color: var(--type-fighting);
+	color: white;
+}
+
+.pill-type-flying {
+	background: linear-gradient(
+		180deg,
+		var(--type-flying-1) 50.52%,
+		var(--type-flying-2) 50.53%
+	);
+	color: var(--gray-1);
+}
+
+.pill-type-poison {
+	background-color: var(--type-poison);
+	color: white;
+}
+
+.pill-type-ground {
+	background: linear-gradient(
+		180deg,
+		var(--type-ground-1) 50.52%,
+		var(--type-ground-2) 50.53%
+	);
+	color: var(--gray-1);
+}
+
+.pill-type-rock {
+	background-color: var(--type-rock);
+	color: white;
+}
+
+.pill-type-bug {
+	background-color: var(--type-bug);
+	color: white;
+}
+
+.pill-type-ghost {
+	background-color: var(--type-ghost);
+	color: white;
+}
+
+.pill-type-steel {
+	background-color: var(--type-steel);
+	color: var(--gray-1);
+}
+
+.pill-type-fire {
+	background-color: var(--type-fire);
+	color: white;
+}
+
+.pill-type-water {
+	background-color: var(--type-water);
+	color: white;
+}
+
+.pill-type-grass {
+	background-color: var(--type-grass);
+	color: var(--gray-1);
+}
+
+.pill-type-electric {
+	background-color: var(--type-electric);
+	color: var(--gray-1);
+}
+
+.pill-type-psychic {
+	background-color: var(--type-psychic);
+	color: white;
+}
+
+.pill-type-ice {
+	background-color: var(--type-ice);
+	color: white;
+}
+
+.pill-type-dragon {
+	background-color: var(--type-dragon);
+	color: white;
+}
+
+.pill-type-dark {
+	background-color: var(--type-dark);
+	color: white;
+}
+
+.pill-type-fairy {
+	background-color: var(--type-fairy);
+	color: var(--gray-1);
 }
 
 /*********************
