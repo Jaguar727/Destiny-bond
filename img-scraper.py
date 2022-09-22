@@ -26,6 +26,7 @@ pages = []
 for pkm in pokemon_collection.find({}, {"_id": 0, "urlName": 1}):
     currentLink = ('https://www.serebii.net/pokemon/' + pkm['urlName'] + '/')
     pages.append(currentLink)
+    print(currentLink + 'appended')
 
 allPkmImg = []
 
@@ -37,16 +38,17 @@ for page in pages:
     pokemonTable = soup.find('table', {'class':'dextable'})
     img = pokemonTable.find('td', {'class':'fooinfo'}).find('img')['src']
     allPkmImg.append(img)
+    print("appended img: " + img)
 
 cont = 1
 
-for image in allPkmImg:
-    pokemon_data = PkmImg(
-        img = image
-    )
-    pokemon_collection.update_one({'intId': cont}, {'$set':{'artwork': pokemon_data.img}})
-    print(cont + ' Imagens adicionadas a db')
-    cont +=1
+# for image in allPkmImg:
+#     pokemon_data = PkmImg(
+#         img = image
+#     )
+#     pokemon_collection.update_one({'intId': cont}, {'$set':{'artwork': pokemon_data.img}})
+#     print(cont, ' images added to Database.')
+#     cont +=1
     
     
 
