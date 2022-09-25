@@ -1,7 +1,7 @@
 <template>
-	<div class="container">
+	<div class="bg-purple-6">
 		<Header />
-		<div class="row">
+		<div class="container bg-purple-5">
 			<div class="color-purple-1">TESTE CARALHOOOOOO</div>
 			<Pokemon-Card
 				class="d-flex mx-auto justify-content-center"
@@ -22,32 +22,21 @@
 				/>
 			</div>
 
-			<div class="">
+			<div class="row plr-40">
 				<div
-					class="col"
+                    class="col-lg-6 d-flex justify-content-center  col-xl-4"
 					v-for="(pokemon, index) in pokemons"
 					:key="pokemon._id"
 					:index="index"
 				>
 					<Pokemon-Card
-						class="mb-16 "
+						class="mb-16"
 						:pokemonImage="pokemons[index].artwork"
 						:pokemonName="pokemons[index].name"
 						:pokemonId="pokemons[index].id"
 						:pokemonType1="pokemons[index].types[0]"
 						:pokemonType2="pokemons[index].types[1]"
 					/>
-					<!-- <div class="d-flex align-items-center ptb-16 mtb-8 bg-purple-1 col-4 mx-auto plr-8 br-3">
-					
-                    <img :src="`https://serebii.net/${pokemons[index].icon}`" alt="" />
-					
-                    <p class="text-gray-1 mtb-8 ml-16">
-						{{ pokemons[index].name }}
-					</p>
-					
-                    <PokemonTypePill class="mlr-16" :pokemonType="pokemons[index].types[0]" />
-					<PokemonTypePill v-if="pokemons[index].types[1]" :pokemonType="pokemons[index].types[1]" />
-				</div> -->
 				</div>
 			</div>
 		</div>
