@@ -445,6 +445,10 @@ hr {
 	padding: 8px;
 }
 
+.p-12 {
+	padding: 12px;
+}
+
 .p-16 {
 	padding: 16px;
 }
@@ -664,5 +668,9 @@ hr {
 }
 
 .icon-large {
-	font-size: 72px !important;
+	font-size: 40px !important;
+}
+
+.icon-extra-large {
+	font-size: 64px !important;
 }

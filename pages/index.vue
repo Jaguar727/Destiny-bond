@@ -1,5 +1,6 @@
 <template>
 	<div>
+        <Header/>
 		<div class="">
 			<div class="color-purple-1">TESTE CARALHOOOOOO</div>
 			<div class="bg-black color-white mt-32" @click="listPokemonInConsole(1)">
