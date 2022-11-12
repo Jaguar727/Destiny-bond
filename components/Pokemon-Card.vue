@@ -2,7 +2,7 @@
 	<div>
 		<div
 			class="
-				bg-purple-4
+				bg-purple-6
 				br-8
 				justify-content-center
 				d-flex

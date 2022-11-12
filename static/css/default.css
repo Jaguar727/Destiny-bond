@@ -19,9 +19,9 @@
 	--purple-1: #b6add5;
 	--purple-2: #a894bc;
 	--purple-3: #9074bc;
-	--purple-4: #68448c;
-	--purple-5: #48246c;
-	--purple-6: #31164c;
+	--purple-4: #78509F;
+	--purple-5: #68448C;
+	--purple-6: #411F64;
 
 	--black: #000000;
 
@@ -559,6 +559,11 @@ hr {
 	background-color: transparent;
 }
 
+.bg-gradient {
+    background: linear-gradient(180deg, #78509F 100%, #562886 100%);
+
+}
+
 /****************************
 **POKEMON TYPE PILL CLASSES**
 ****************************/
@@ -683,3 +688,4 @@ hr {
 .icon-extra-large {
 	font-size: 64px !important;
 }
+
