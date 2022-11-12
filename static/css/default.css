@@ -19,9 +19,9 @@
 	--purple-1: #b6add5;
 	--purple-2: #a894bc;
 	--purple-3: #9074bc;
-	--purple-4: #78509F;
-	--purple-5: #68448C;
-	--purple-6: #411F64;
+	--purple-4: #78509f;
+	--purple-5: #68448c;
+	--purple-6: #411f64;
 
 	--black: #000000;
 
@@ -559,9 +559,8 @@ hr {
 	background-color: transparent;
 }
 
-.bg-gradient {
-    background: linear-gradient(180deg, #78509F 100%, #562886 100%);
-
+.bg-budega {
+	background-image: linear-gradient(180deg, #78509f 0%, #562886 100%);
 }
 
 /****************************
@@ -579,11 +578,7 @@ hr {
 }
 
 .pill-type-flying {
-	background: linear-gradient(
-		180deg,
-		var(--type-flying-1) 50.52%,
-		var(--type-flying-2) 50.53%
-	);
+	background: linear-gradient(180deg, var(--type-flying-1) 50.52%, var(--type-flying-2) 50.53%);
 	color: var(--gray-1);
 }
 
@@ -593,11 +588,7 @@ hr {
 }
 
 .pill-type-ground {
-	background: linear-gradient(
-		180deg,
-		var(--type-ground-1) 50.52%,
-		var(--type-ground-2) 50.53%
-	);
+	background: linear-gradient(180deg, var(--type-ground-1) 50.52%, var(--type-ground-2) 50.53%);
 	color: var(--gray-1);
 }
 
@@ -688,4 +679,3 @@ hr {
 .icon-extra-large {
 	font-size: 64px !important;
 }
-

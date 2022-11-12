@@ -1,5 +1,5 @@
 <template>
-	<div class="bg-purple-4">
+	<div class="bg-purple-4 position-fixed top-0 z-max w-100">
 		<div
 			class="
 				d-flex
@@ -42,5 +42,9 @@
 .header-link-group {
     left:0;
     right: 0;
+}
+
+.z-max {
+    z-index: 99;
 }
 </style>

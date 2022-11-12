@@ -1,7 +1,8 @@
 <template>
-	<div class="bg-purple-6">
+	<div>
 		<Header />
-        <div class="bg-gradient position-fixed a w-100 top-0 start-0"></div>
+		<div class="position-fixed h-100 w-100 top-0 top-25 bg-budega" />
+
 		<div class="container">
 			<div class="row plr-40">
 				<div
@@ -46,7 +47,7 @@ export default {
 </script>
 
 <style scoped>
-    .a {
-        height: 100vh;   
-    }
+.a {
+	max-height: 100vh;
+}
 </style>
