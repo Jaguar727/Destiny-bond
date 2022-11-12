@@ -17,7 +17,7 @@
 			/>
 			<p
 				class="
-					color-purple-3
+					color-white-1
 					font-16
 					mx-auto
 					position-absolute
@@ -51,8 +51,14 @@
 }
 
 .pokemon-card-size {
-	width: 320px;
+	width: 100%;
 	height: 320px;
+    transition: 0.3s;
+}
+
+.pokemon-card-size:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
 }
 </style>
 

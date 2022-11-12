@@ -3,16 +3,16 @@
 		<Header />
 		<div class="position-fixed h-100 w-100 top-0 top-25 bg-budega" />
 
-		<div class="container">
+		<div class="container pt-100 mt-16">
 			<div class="row plr-40">
 				<div
-					class="col-lg-6 d-flex justify-content-center col-xl-4"
+					class="col-lg-6 d-flex justify-content-center col-xl-3"
 					v-for="(pokemon, index) in pokemons"
 					:key="pokemon._id"
 					:index="index"
 				>
 					<Pokemon-Card
-						class="mb-16"
+						class="w-100 mb-16"
 						:pokemonImage="pokemons[index].artwork"
 						:pokemonName="pokemons[index].name"
 						:pokemonId="pokemons[index].id"
