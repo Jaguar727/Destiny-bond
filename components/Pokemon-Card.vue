@@ -1,6 +1,7 @@
 <template>
 	<div>
-		<div
+		<NuxtLink 
+            :to="`/pokemon/${pokemon.intId}`"
 			class="
 				bg-purple-6
 				br-8
@@ -9,6 +10,7 @@
 				flex-column
 				position-relative
                 pokemon-card-size
+                text-decoration-none
 			"
 		>
 			<img
@@ -35,7 +37,7 @@
 					:pokemonType="pokemonType2"
 				/>
 			</div>
-		</div>
+		</NuxtLink>
 	</div>
 </template>
 
@@ -70,6 +72,7 @@ export default {
 		pokemonName: String,
 		pokemonType1: String,
 		pokemonType2: String,
+        pokemon: Object,
 	},
 };
 </script>

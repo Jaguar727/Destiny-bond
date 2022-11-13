@@ -23,7 +23,7 @@
 					d-flex
 				"
 			>
-				<NuxtLink class="header-link" to="#">Home</NuxtLink>
+				<NuxtLink class="header-link" to="/">Home</NuxtLink>
 				<NuxtLink class="header-link mlr-40" to="#">Pokedex</NuxtLink>
 				<NuxtLink class="header-link" to="#">About</NuxtLink>
 			</div>

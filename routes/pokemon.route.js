@@ -12,10 +12,14 @@ router.get("/", async (req, res) => {
 	}
 });
 
-router.get("/dinilsu", async (req, res) => {
+router.get("/:id", async (req, res) => {
 	try {
-		res.send("figarofá");
-	} catch (err) {}
+        const pokemon = await Pokemon.find({ intId: req.params.id })
+		res.send(pokemon)
+	} catch(err) {
+        console.error(err);
+		res.status(500).send({ message: messages.database_error });
+    }
 });
 
 module.exports = router;

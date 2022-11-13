@@ -3,7 +3,7 @@
 		<Header />
 		<div class="position-fixed h-100 w-100 top-0 top-25 bg-budega" />
 
-		<div class="container pt-100 mt-16">
+		<div class="container pt-92 mt-16">
 			<div class="row plr-40">
 				<div
 					class="col-lg-6 d-flex justify-content-center col-xl-3"
@@ -13,6 +13,7 @@
 				>
 					<Pokemon-Card
 						class="w-100 mb-16"
+                        :pokemon=pokemons[index]
 						:pokemonImage="pokemons[index].artwork"
 						:pokemonName="pokemons[index].name"
 						:pokemonId="pokemons[index].id"
