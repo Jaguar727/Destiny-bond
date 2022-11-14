@@ -27,7 +27,7 @@
 
 	--gray-1: #212121;
 
-    --white-1: #D1C3E6;
+	--white-1: #d1c3e6;
 	/*
     POKEMON TYPE COLOR VARIABLES
     */
@@ -54,7 +54,7 @@
 }
 
 html {
-    scroll-padding-top:100px
+	scroll-padding-top: 100px;
 }
 
 p,
@@ -128,6 +128,10 @@ hr {
 
 .font-bold {
 	font-weight: 700;
+}
+
+.font-8 {
+	font-size: 8px;
 }
 
 .font-12 {
@@ -480,8 +484,8 @@ hr {
 }
 
 .pt-92 {
-    padding-top:92px;
-} 
+	padding-top: 92px;
+}
 /*
     COLOR CLASSES
 */
@@ -571,7 +575,7 @@ hr {
 	background-color: transparent;
 }
 
-.bg-budega {
+.bg-gradient-ghost {
 	background-image: linear-gradient(180deg, #78509f 0%, #562886 100%);
 }
 
