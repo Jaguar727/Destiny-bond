@@ -22,8 +22,18 @@
 						</div>
 
 						<div class="color-white d-flex align-items-center font-24">
-                            <p class="mr-24">Abilities: </p>
-							<div class="d-flex justify-content-around br-8 align-items-center bg-purple-6 p-8 w-100">
+							<p class="mr-24">Abilities:</p>
+							<div
+								class="
+									d-flex
+									justify-content-around
+									br-8
+									align-items-center
+									bg-purple-6
+									p-8
+									w-100
+								"
+							>
 								<p>
 									{{ pokemon.abilities[0] }}
 								</p>
@@ -32,7 +42,7 @@
 								</p>
 								<div v-if="pokemon.abilities[2]" class="text-center">
 									<p class="font-16">{{ pokemon.abilities[2] }}</p>
-                                    <p class="font-8">Hidden Ability</p>
+									<p class="font-8">Hidden Ability</p>
 								</div>
 							</div>
 						</div>
