@@ -7,10 +7,11 @@
 				d-flex
 				align-items-center
 				justify-content-center
+                text-capitalize
 			"
 			:class="`pill-type-${pokemonType}`"
 		>
-			{{ pokemonType.charAt(0).toUpperCase() + pokemonType.slice(1) }}
+			{{ pokemonType }}
 		</div>
 	</div>
 </template>
